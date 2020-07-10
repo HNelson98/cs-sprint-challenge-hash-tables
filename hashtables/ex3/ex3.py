@@ -3,6 +3,12 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    inter = set(arrays[0]).intersection(*arrays)
+
+    result = []
+
+    for num in inter:
+        result.append(num)
 
     return result
 
