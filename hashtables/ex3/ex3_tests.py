@@ -11,18 +11,21 @@ class TestEx2(unittest.TestCase):
             [1,4,5],
             [1,6,7]
         ])
+        print(result)
         self.assertTrue(result == [1])
 
         result = intersection([
             [1],
             [1],
         ])
+        print(result)
         self.assertTrue(result == [1])
 
         result = intersection([
             [1,2],
             [1],
         ])
+        print(result)
         self.assertTrue(result == [1])
 
         result = intersection([
@@ -30,7 +33,7 @@ class TestEx2(unittest.TestCase):
             [1,4,5,3],
             [1,6,7,3]
         ])
-        result.sort()
+        # result.sort()
         self.assertTrue(result == [1,3])
 
     def test_large(self):
@@ -48,7 +51,8 @@ class TestEx2(unittest.TestCase):
         ]
 
         result = intersection(arrays)
-        result.sort()
+        print(result)
+        # result.sort()
         self.assertTrue(result == [1,2,3])
 
 if __name__ == '__main__':
