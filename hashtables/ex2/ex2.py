@@ -4,11 +4,24 @@ class Ticket:
         self.source = source
         self.destination = destination
 
-
 def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
     # Your code here
+    routes = {}
+    route = [None] * length
+
+
+    for i in range(length):
+        if tickets[i].source == "NONE":
+            route[0] = tickets[i].destination
+        routes[tickets[i].source] = tickets[i].destination 
+    for j in range(length):
+        if route[j - 1] is not None:
+            route[j] = routes[route[j - 1]]
+
 
     return route
+
+# reconstruct_trip(tickets, 10)
